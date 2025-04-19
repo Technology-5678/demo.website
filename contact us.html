@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+
+</head>
+<body>
+    <div class="background"></div>
+  <div class="card">
+    <h1>Contact Us</h1>
+    
+
+<div class="info2">
+  <p>Let’s Talk Food!</p>
+<p>  Want to reserve a table? Planning a family dinner or small gathering?<br>
+ Any Special Requests (Birthday decor, Candlelight setup, etc.) <div class="br"></div>
+  Or just have a question about our menu? We’re here to help!</p><br>
+<a href="https://wa.me/917070000315?text=hello%20%20I%20am%20interested%20in%20your%20services"><p><strong> +91-70700 00315</strong></p></a>
+<br>
+
+<h5>Opening Hours:</h5>
+11:00 AM – 11:00 PM (All Days)
+
+
+</div>
+
+    <div class="info">
+     
+     <strong>  <p>Visit Us:📍Swarg Exotica and Restro,<br> near Burhi Gandak River Main Market,<br> Gudari Bazar, Samastipur, <br>Bihar 848101</p></strong>
+      <p>📞Call Us:<a href="tel:+9107070000315"> +91- 070700 00315</a></p>
+      <p>📸 Instagram: @swargexotica_ </p>
+      <p><b>"we’d love to serve you something special today!"</b></p>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3230.180721138264!2d85.7848197!3d25.8652478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed91478ab12445%3A0x7c8f88b00ad81dc9!2sExotica%20Cafe%20and%20Restro!5e1!3m2!1sen!2sin!4v1744697807466!5m2!1sen!2sin" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+ 
+   <!-- Navbar -->
+   <div class="sidebar" id="sidebar">
+    <div class="toggle-btn" onclick="toggleSidebar()">
+      <i class="ri-menu-line"></i>
+    </div>
+    <div class="logo"></div>
+    <ul>
+     <a href="index.html"><li><i class="ri-home-4-line"></i><span>Home</span></li></a> 
+       <a href="about us.html"> <li class="active"><i class="ri-user-line"></i><span>about us</span></li></a>
+       <a href="gallery.html"> <li><i class="ri-image-2-line"></i><span>Gallery</span></li></a>
+       <a href="Client Reviews.html"> <li><i class="ri-chat-smile-2-line"></i><span>Client Reviews</span></li></a>
+       <a href="contact us.html"> <li><i class="ri-phone-line"></i><span>Contact us</span></li></a>
+    </ul>
+  </div>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(120deg, #e0f7fa, #fff);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    
+    }
+
+   
+
+    .card {
+      background-color: #ffffff8d;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      max-width: 800px;
+      width: 100%;
+      backdrop-filter: blur(6px);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+.info2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+    h1 {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 25px;
+      color: #222;
+    }
+
+    .info p {
+      font-size: 1.1rem;
+      margin: 12px 0;
+      color: #000000;
+      text-align: center;
+    }
+
+    iframe {
+      margin-top: 25px;
+      width: 100%;
+      height: 350px;
+      border: none;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .info p {
+        font-size: 1rem;
+      }
+
+      .card {
+        padding: 25px;
+      }
+
+      iframe {
+        height: 300px;
+      }
+      .opt a:hover{
+      transform: scale(1.28);
+
+    }
+    }
+    .background {
+      background-image: url("Backgroud for pc.jpg");
+      background-size: cover;
+      background-position: center;
+      filter: blur(10px);
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      z-index: -2;
+    }
+   
+    
+    .sidebar {
+      width: 80px;
+      min-height: 100vh;
+      background: #00000041;
+      transition: width 0.3s;
+      overflow: hidden;
+      position: fixed;
+      left: 0px;
+      top: 0px;
+    }
+
+    .sidebar.expanded {
+      width: 260px;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 29px;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 999;
+      color: #fff;
+
+    }
+
+    .logo {
+      text-align: center;
+      font-size: 26px;
+      padding: 30px 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 20px;
+    }
+
+    .sidebar ul li {
+      display: flex;
+      align-items: center;
+      padding: 14px 20px;
+      cursor: pointer;
+      position: relative;
+      transition: background 0.3s;
+    }
+
+    .sidebar ul li i {
+      font-size: 22px;
+      margin-right: 20px;
+      min-width: 24px;
+      text-align: center;
+    }
+
+    .sidebar ul li span {
+      transition: opacity 0.3s;
+      white-space: nowrap;
+    }
+
+    .sidebar ul li:hover {
+      background: #2c2c3e;
+      background: #ff6b81;
+      border-radius: 0 25px 25px 0;
+    }
+
+    
+
+    .active i, .active span {
+      color: #fff;
+    }
+
+    .sidebar:not(.expanded) ul li span {
+      display: none;
+    }
+
+    .sidebar ul li::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.201);
+      padding: 4px 10px;
+      border-radius: 5px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      margin-left: 10px;
+      font-size: 14px;
+    }
+
+    .sidebar:not(.expanded) ul li:hover::after {
+      opacity: 1;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 40px;
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+    
+  </style>
+
+<script>
+  function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("expanded");
+  }
+</script>
+
+</body>
+</html>

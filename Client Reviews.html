@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>India's No. 1 Restaurant - Exotica Cafe and Restro</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+
+</head>
+<body>
+  <div class="background"></div>
+  <div class="overlay"></div>
+   <!-- Navbar -->
+   <div class="sidebar" id="sidebar">
+    <div class="toggle-btn" onclick="toggleSidebar()">
+      <i class="ri-menu-line"></i>
+    </div>
+    <div class="logo"></div>
+    <ul>
+     <a href="index.html"><li><i class="ri-home-4-line"></i><span>Home</span></li></a> 
+       <a href="about us.html"> <li class="active"><i class="ri-user-line"></i><span>about us</span></li></a>
+       <a href="gallery.html"> <li><i class="ri-image-2-line"></i><span>Gallery</span></li></a>
+       <a href="Client Reviews.html"> <li><i class="ri-chat-smile-2-line"></i><span>Client Reviews</span></li></a>
+       <a href="contact us.html"> <li><i class="ri-phone-line"></i><span>Contact us</span></li></a>
+    </ul>
+  </div>
+
+  <!-- CLIENT REVIEWS SECTION -->
+  <section class="reviews-section">
+    <h1 class="review-title">What Our Clients Say</h1>
+    <div class="reviews-container">
+      <div class="review-card">
+        
+        <h3>Aarav Mishra
+        </h3>
+        <p>“This is my go-to place whenever I want to eat out in Samastipur. Great ambiance, delicious food, and quick service. You won’t be disappointed!”</p>
+        <div class="stars">★★★★★</div>
+      </div>
+
+      <div class="review-card">
+        
+        <h3>Rekha Singh</h3>
+        <p>“The Chicken Swarg Special is something I keep coming back for. Their tandoori items are top-notch too. Highly recommended!”</p>
+        <div class="stars">★★★★☆</div>
+      </div>
+
+      <div class="review-card">
+        
+        <h3>Simran Kumari
+        </h3>
+        <p>"Clean, family-friendly, and budget-friendly. The variety on the menu is impressive and they don’t compromise on taste"</p>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+  </section>
+  <div class="owner">
+  <img src="seh.jpg" alt="" class="logo2"></img>
+  <h3 class="owner2">Owner ✅</h3>
+  <p class="qoute">"We are proud to be your favorite — and we’ll keep working to make every visit special."</p>
+
+</div>
+
+<br>
+<br>
+<br>
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f6fc;
+      color: #333;
+      padding-bottom: 80px;
+      position: relative;
+    }
+
+    .background {
+     background-image: url(Backgroud\ for\ pc.jpg);
+      background-size: cover;
+      background-position: center;
+      filter: blur(8px);
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      z-index: -2;
+    }
+    .logo2{
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      display: flex;
+            justify-content: center;
+            align-items: center;
+
+    }
+    .owner{
+      display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+    }
+    .owner2{
+      display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: #b5a61d;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #333;
+    }
+.qoute{
+  color: #dcdbdb;
+  font-style: italic;
+}
+    .overlay {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      background: rgba(25, 25, 25, 0.204);
+      backdrop-filter: blur(2px);
+      z-index: -1;
+    }
+
+    /* Review Section */
+    .reviews-section {
+      padding: 60px 20px 30px;
+      text-align: center;
+    }
+
+    .review-title {
+      font-size: 2.8rem;
+      color: #e6e669;
+      margin-bottom: 40px;
+      font-weight: 700;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black;
+    }
+
+    .reviews-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 0 10px;
+    }
+
+    .review-card {
+      background: rgba(23, 23, 23, 0.391);
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1s ease forwards;
+      
+    }
+
+    .review-card:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .review-card:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    
+
+    .review-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #216bd9;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #2004f4;
+    }
+
+    .review-card p {
+      font-style: italic;
+      color: #dcdbdb;
+      font-size: 1rem;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+
+    .stars {
+      color: #ffc107;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 600px) {
+      .review-title {
+        font-size: 2rem;
+      }
+
+      .review-card {
+        padding: 20px;
+      }
+
+      .client-img {
+        width: 70px;
+        height: 70px;
+      }
+      .opt a:hover{
+      transform: scale(1.28);
+
+    }
+    .profile{
+      visibility: hidden;
+      white-space: none;
+    }
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 10px 20px;
+      background-color: rgba(17, 7, 7, 0.5);
+      color: white;
+      position: fixed;
+      bottom: 0px;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      float: row;
+    }
+    .opt a {
+      margin: 0 6px;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: transform 0.3s ease;
+      
+    }
+    .opt a:hover{
+      transform: scale(1.28);
+
+    }
+    .profile {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-image: url(seh.jpg);
+      background-size: cover;
+      background-position: center;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      right: 30px;
+    }
+    @media (min-width: 769px) {
+      .opt {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        left: 405px;
+       
+      }
+     
+    
+    }
+    .sidebar {
+      width: 80px;
+      min-height: 100vh;
+      background: #00000038;
+      transition: width 0.3s;
+      overflow: hidden;
+      position: fixed;
+      z-index: 999;
+      color: #fff;
+    }
+
+    .sidebar.expanded {
+      width: 260px;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 29px;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .logo {
+      text-align: center;
+      font-size: 26px;
+      padding: 30px 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 20px;
+    }
+
+    .sidebar ul li {
+      display: flex;
+      align-items: center;
+      padding: 14px 20px;
+      cursor: pointer;
+      position: relative;
+      transition: background 0.3s;
+    }
+
+    .sidebar ul li i {
+      font-size: 22px;
+      margin-right: 20px;
+      min-width: 24px;
+      text-align: center;
+    }
+
+    .sidebar ul li span {
+      transition: opacity 0.3s;
+      white-space: nowrap;
+    }
+
+    .sidebar ul li:hover {
+      background: #2c2c3e;
+      background: #ff6b81;
+      border-radius: 0 25px 25px 0;
+    }
+
+    
+
+    .active i, .active span {
+      color: #fff;
+    }
+
+    .sidebar:not(.expanded) ul li span {
+      display: none;
+    }
+
+    .sidebar ul li::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #2c2c3e;
+      padding: 4px 10px;
+      border-radius: 5px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      margin-left: 10px;
+      font-size: 14px;
+    }
+
+    .sidebar:not(.expanded) ul li:hover::after {
+      opacity: 1;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 40px;
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+  </style>
+   <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("expanded");
+    }
+  </script>
+
+
+</body>
+</html>

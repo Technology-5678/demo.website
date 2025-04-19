@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>india's no. 1 restaurant-Exotica Cafe and Restro</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="sidebar" id="sidebar">
+    <div class="toggle-btn" onclick="toggleSidebar()">
+      <i class="ri-menu-line"></i>
+    </div>
+    <div class="logo"></div>
+    <ul>
+     <a href="index.html"   onclick="speakWelcome()"><li><i class="ri-home-4-line"  onclick="speakWelcome()"></i><span>Home</span></li></a> 
+       <a href="about us.html"   onclick="speakWelcome()"> <li class="active"><i class="ri-user-line"></i><span>about us</span></li></a>
+       <a href="gallery.html"   onclick="speakWelcome()"> <li><i class="ri-image-2-line"   onclick="speakWelcome()"></i><span>Gallery</span></li></a>
+       <a href="Client Reviews.html"   onclick="speakWelcome()"> <li><i class="ri-chat-smile-2-line"   onclick="speakWelcome()"></i><span>Client Reviews</span></li></a>
+       <a href="contact us.html"   onclick="speakWelcome()"> <li><i class="ri-phone-line"   onclick="speakWelcome()"></i><span>Contact us</span></li></a>
+    </ul>
+  </div>
+
+ 
+
+  <!-- Logo Effect -->
+  <div id="logo-effect"></div>
+
+  <!-- Background Videos -->
+  <video autoplay muted loop id="myVideo">
+    <source src="bgv1.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <video autoplay muted loop id="myVideo2">
+    <source src="mbgv.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+ 
+
+  <section class="hero-section">
+    <div>
+      <br>
+      <br>
+      <h1 style="color: white; text-align: center;" class="welcome-msg">Welcome to Exotica Cafe and Restro</h1>
+    
+    
+      <div class="btn-container">
+        <a href="about us.html"  onclick="speakWelcome()" class="get-started-btn">Get Started</a>
+      </div>
+    </div>
+  </section>
+
+ 
+  </main>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+      color: white;
+    }
+
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      display: none;
+    }
+
+    #myVideo, #myVideo2 {
+      display: none;
+    }
+/*responsive for all devices*/
+    @media (min-width: 769px) {
+      #myVideo {
+        display: block;
+      }
+
+      #zoom-logo {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    
+
+    }
+
+    @media (max-width: 768px) {
+      #myVideo2 {
+        display: block;
+      }
+
+      #logo-effect {
+        left: 0;
+        transform: scale(0.7);
+      }
+
+      #zoom-logo {
+        left: 50%;
+        transform: translateX(-50%) scale(0.8);
+      }
+
+      .opt {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        left: -05px;
+        word-spacing: 10px;
+      }
+      .welcome-msg{
+        font-size: 15px ;
+      }
+      .us{
+        word-spacing: 02px;
+      }
+    
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 10px 20px;
+      background-color: rgba(17, 7, 7, 0.5);
+      color: white;
+      position: fixed;
+      bottom: 0px;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: bold;
+      flex: 1 1 100px;
+    }
+
+    .opt a {
+      margin: 0 6px;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: transform 0.3s ease;
+      
+    }
+    .opt a:hover{
+      transform: scale(1.28);
+
+    }
+
+    .profile {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-image: url(seh.jpg);
+      background-size: cover;
+      background-position: center;
+      border: none;
+      cursor: pointer;
+    }
+
+    #myBtn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1001;
+      padding: 10px 20px;
+      border: none;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      cursor: pointer;
+      visibility: hidden;
+    }
+
+    #zoom-logo {
+      width: 60vw;
+      max-width: 400px;
+      aspect-ratio: 1 / 1;
+      background-color: rgb(23, 234, 163);
+      background-image: url(logo.eys.png);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 100px;
+      border-radius: 50%;
+      visibility: hidden;
+      z-index: 999;
+    }
+
+    #logo-effect {
+      width: 60vw;
+      max-width: 400px;
+      aspect-ratio: 1 / 1;
+      background-image: url(logo\ seh.png);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+
+   
+
+    .main-content {
+      margin-top: 600px;
+      padding: 30px 15px 100px;
+      max-width: 90%;
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 5;
+    }
+
+    .main-content h1,
+    .main-content h2 {
+      color: #00ffee;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+
+    .main-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .btn-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .get-started-btn {
+      display: inline-block;
+      padding: 18px 30px;
+      background: linear-gradient(45deg, #012194, #e16969dd);
+      color: #f8f4f4;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 30px;
+      box-shadow: 0 0 15px #00ffee;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      top: 400px;
+    }
+
+    .get-started-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 20px #00ffee, 0 0 25px #0066ff;
+    }
+
+    strong {
+      color: red;
+      
+    }
+
+    h3 {
+      color: rgb(0, 115, 255);
+    }
+
+    h4 {
+      color: lightpink;
+    }
+    .sidebar {
+      width: 80px;
+      min-height: 100vh;
+      background: #00000054;
+      transition: width 0.3s;
+      overflow: hidden;
+      position: absolute;
+
+    }
+
+    .sidebar.expanded {
+      width: 260px;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 29px;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .logo {
+      text-align: center;
+      font-size: 26px;
+      padding: 30px 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 20px;
+    }
+
+    .sidebar ul li {
+      display: flex;
+      align-items: center;
+      padding: 14px 20px;
+      cursor: pointer;
+      position: relative;
+      transition: background 0.3s;
+    }
+
+    .sidebar ul li i {
+      font-size: 22px;
+      margin-right: 20px;
+      min-width: 24px;
+      text-align: center;
+    }
+
+    .sidebar ul li span {
+      transition: opacity 0.3s;
+      white-space: nowrap;
+    }
+
+    .sidebar ul li:hover {
+      background: #2c2c3e;
+      background: #ff6b81;
+      border-radius: 0 25px 25px 0;
+    }
+
+    
+
+    .active i, .active span {
+      color: #fff;
+    }
+
+    .sidebar:not(.expanded) ul li span {
+      display: none;
+    }
+
+    .sidebar ul li::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #2c2c3e;
+      padding: 4px 10px;
+      border-radius: 5px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      margin-left: 10px;
+      font-size: 14px;
+    }
+
+    .sidebar:not(.expanded) ul li:hover::after {
+      opacity: 1;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 40px;
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+  </style>
+ 
+  
+ <script>
+  function speakWelcome() {
+    const msg = new SpeechSynthesisUtterance("Welcome to Exotica Cafe and Restro");
+    msg.rate = 1;
+    msg.pitch = 1.2;
+    msg.volume = 1;
+
+    const voices = speechSynthesis.getVoices();
+    const female = voices.find(v => v.name.includes("Google US English"));
+    if (female) msg.voice = female;
+
+    speechSynthesis.speak(msg);
+  }
+
+  // Load voices first
+  window.speechSynthesis.onvoiceschanged = () => {};
+
+
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("expanded");
+    }
+
+
+</script>
+ 
+  
+</body>
+</html>

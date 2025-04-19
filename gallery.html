@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>india's no 1 restaurant-Exotica Cafe and Restro</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+
+<body>
+  <div class="background"></div>
+  
+   <!-- Navbar -->
+   <div class="sidebar" id="sidebar">
+    <div class="toggle-btn" onclick="toggleSidebar()">
+      <i class="ri-menu-line"></i>
+    </div>
+    <div class="logo"></div>
+    <ul>
+     <a href="index.html"><li><i class="ri-home-4-line"></i><span>Home</span></li></a> 
+       <a href="about us.html"> <li class="active"><i class="ri-user-line"></i><span>about us</span></li></a>
+       <a href="gallery.html"> <li><i class="ri-image-2-line"></i><span>Gallery</span></li></a>
+       <a href="Client Reviews.html"> <li><i class="ri-chat-smile-2-line"></i><span>Client Reviews</span></li></a>
+       <a href="contact us.html"> <li><i class="ri-phone-line"></i><span>Contact us</span></li></a>
+    </ul>
+  </div>
+
+    <section class="gallery" id="about">
+      <div class="gallery-info">
+        <h1>Exotica Cafe and Restro
+          <br>Gallery
+        </h1>
+        <p>A Taste of What Awaits You
+  
+          Take a look inside Swarg Exotica and Restro— where beautiful interiors meet mouth-watering food. Our gallery showcases the heart of our restaurant: the vibrant dining spaces, colorful platters, happy customers, and cozy corners where stories are shared over delicious meals.
+          
+          From festive events to everyday joy, every moment at Swarg Exotica and Restro is worth capturing.
+          
+          Explore. Crave. Visit Us Soon.
+          
+          Images.....
+          </p>
+      </div>
+    </section>
+      
+    <!---video grid--->
+
+    <div class="video-grid">
+      <div class="video">
+        <img src="exotica0057.jpg" alt="Exotica Cafe View">
+      </div>
+      <div class="video">
+        <img src="exotica0083.jpg" alt="Delicious Dish">
+      </div>
+      <div class="video">
+        <img src="exotica0041.jpg" alt="Customer Dining">
+      </div>
+      <div class="video">
+        <img src="exotica0016.jpg" alt="Interior Decor">
+      </div>
+     
+      <div class="video">
+        <img src="exotica0133.jpg" alt="Tasty Desserts">
+      </div>
+      <div class="video">
+        <img src="exotica0094.jpg" alt="Live Music Event">
+      </div>
+      <div class="video">
+        <img src="exotica0003.jpg" alt="Beverage Corner">
+      </div>
+      <div class="video">
+        <img src="exotica0076.jpg" alt="Festive Lighting">
+      </div>
+      <div class="video">
+        <img src="exotica0090.jpg" alt="Evening Ambience">
+      </div>
+     
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+        background: linear-gradient(120deg, #0f0c29, #302b63, #24243e);
+     
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      user-select: none;
+      color: #000;
+      overflow: wrap;
+    }
+    .background {
+      background-image: url("Backgroud for pc.jpg");
+      background-size: cover;
+      background-position: center;
+      filter: blur(10px);
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      z-index: -2;
+    }
+    .video-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+    .container {
+      width: 100%;
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      transform-style: preserve-3d;
+      transition: transform 0.2s ease-out;
+    }
+    .video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+    
+div{
+  overflow: hidden;
+  background-size: cover;
+}
+  
+   
+    .content {
+      margin-left: 240px;
+      padding: 90px 20px 20px 20px;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      position: relative;
+      right: 100px;
+    }
+
+    .video {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      padding: 10px;
+      transition: transform 0.3s ease;
+      width: 360;
+       height:360px;
+    }
+
+    .video:hover {
+      transform: scale(1.05);
+    }
+
+    .video iframe, .video video {
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+    }
+
+
+    /* Scroll Smooth */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+    
+
+      .content {
+        margin-left: 0;
+        padding-top: 100px;
+      }
+
+      .navbar {
+
+        flex-direction: row;
+        align-items: flex-start;
+      }
+      .opt a {
+      margin: 0 6px;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: transform 0.3s ease;
+      
+    }
+    .video-grid{
+      position: relative;
+      left: 10%;
+    }
+   .gallery-info{
+    position: relative;
+    top: 30px;
+   }
+   .home{
+    z-index: 999;
+    position: fixed;
+   }
+    }
+    .gallery {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-info {
+  background: rgba(18, 17, 17, 0.414);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 700px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  box-shadow: 0 0 20px #fff5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 2s ease forwards;
+  opacity: 0;
+  font-style: italic;
+}
+
+.gallery-info:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #fff9;
+}
+h1{
+  color: #f3ff09;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 10px 20px;
+      background-color: rgba(17, 7, 7, 0.5);
+      color: white;
+      position: fixed;
+      bottom: 0px;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    .opt a {
+      margin: 0 6px;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: transform 0.3s ease;
+      
+    }
+    .opt a:hover{
+      transform: scale(1.28);
+
+    }
+    .profile {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-image: url(seh.jpg);
+      background-size: cover;
+      background-position: center;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      right: 20px;
+    }
+    @media (min-width: 769px) {
+      .opt {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        left: 350px;
+       
+      }
+      .video-grid{
+        position: relative;
+        left: 20%;
+        overflow: hidden;
+      }
+     
+     
+    
+    }
+    @media (max-width: 600px) {
+    
+    .profile{
+      visibility: hidden;
+      white-space: none;
+    }
+    .opt a{
+      word-spacing: 1px;
+      position: relative;
+     
+
+    }
+    
+    }
+    .sidebar {
+      width: 80px;
+      min-height: 100vh;
+      background: #00000031;
+      transition: width 0.3s;
+      overflow: hidden;
+      position: fixed;
+      z-index: 999;
+      color: #fff;
+    }
+
+    .sidebar.expanded {
+      width: 260px;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 29px;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .logo {
+      text-align: center;
+      font-size: 26px;
+      padding: 30px 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 20px;
+    }
+
+    .sidebar ul li {
+      display: flex;
+      align-items: center;
+      padding: 14px 20px;
+      cursor: pointer;
+      position: relative;
+      transition: background 0.3s;
+    }
+
+    .sidebar ul li i {
+      font-size: 22px;
+      margin-right: 20px;
+      min-width: 24px;
+      text-align: center;
+    }
+
+    .sidebar ul li span {
+      transition: opacity 0.3s;
+      white-space: nowrap;
+    }
+
+    .sidebar ul li:hover {
+      background: #2c2c3e;
+      background: #ff6b81;
+      border-radius: 0 25px 25px 0;
+    }
+
+   
+
+    .active i, .active span {
+      color: #fff;
+    }
+
+    .sidebar:not(.expanded) ul li span {
+      display: none;
+    }
+
+    .sidebar ul li::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #2c2c3e;
+      padding: 4px 10px;
+      border-radius: 5px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      margin-left: 10px;
+      font-size: 14px;
+    }
+
+    .sidebar:not(.expanded) ul li:hover::after {
+      opacity: 1;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 40px;
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+
+  </style>
+   <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("expanded");
+    }
+  </script>
+
+</body>
+</html>

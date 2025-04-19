@@ -1,0 +1,365 @@
+<!-- about us.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>India's No. 1 Restaurant - Exotica Cafe and Restro</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+
+</head>
+<body>
+  <div class="background"></div>
+  <div class="sidebar" id="sidebar">
+    <div class="toggle-btn" onclick="toggleSidebar()">
+      <i class="ri-menu-line"></i>
+    </div>
+    <div class="logo"></div>
+    <ul>
+     <a href="index.html"><li><i class="ri-home-4-line"></i><span>Home</span></li></a> 
+       <a href="about us.html"> <li class="active"><i class="ri-user-line"></i><span>About us</span></li></a>
+       <a href="gallery.html"> <li><i class="ri-image-2-line"></i><span>Gallery</span></li></a>
+       <a href="Client Reviews.html"> <li><i class="ri-chat-smile-2-line"></i><span>Client Reviews</span></li></a>
+       <a href="contact us.html"> <li><i class="ri-phone-line"></i><span>Contact us</span></li></a>
+    </ul>
+  </div>
+  <h2 class="about-heading">About <span>Us</span></h2>
+  <section class="about-us-section">
+    <div class="about-container">
+      <div class="about-text">
+        <p><h2>Welcome to</h2> <strong><h3>Exotica Cafe and Restro</h3></strong></p>
+        <p>
+         
+Welcome to Swarg Exotica and Restro Samastipur’s Most Loved Restaurant
+
+A Passion for Food, Served with Love
+
+
+Looking for a place that feels like home, serves food that touches the soul, and offers an atmosphere perfect for every mood? Welcome to Swarg Exotica, Samastipur’s favorite spot for fine dining, family meals, celebrations, and more.
+
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="exotica0122.jpg" alt="Exotica Cafe and Restro">
+      </div>
+
+
+      <div class="about-text">
+        <h2> <strong>Location</strong></h2>
+        <p>
+         
+            Located at Magardahi Ghat, Swarg Exotica and Restrois more than just a restaurant — it’s a place where flavors come alive, where every meal is made with care, and every guest is treated like family.
+
+            Whether you're here for a quick lunch, a romantic dinner, or a big celebration, we promise you one thing: great taste, great service, and great memories.
+            
+
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="exotica.png" alt="Exotica Cafe and Restro">
+      </div>
+
+
+
+      <div class="about-text">
+        <h2> <strong>Dine. Celebrate. Repeat. – Only at Swarg Exotica.
+
+        </strong></h2>
+        <p>
+         
+            At Swarg Exotica, our journey began with a simple goal — to bring high-quality, delicious food to the people of Samastipur in a warm and welcoming environment. Since then, we’ve grown into one of the city’s most trusted restaurants, known for our diverse menu, beautiful ambiance, and consistent service.
+
+
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="exotica0046.jpg" alt="Exotica Cafe and Restro">
+      </div>
+
+      <div class="about-text">
+        <h2><strong>Specialities</strong></h2>
+        <p>
+         
+            We believe that food isn’t just about taste — it’s about experience. That’s why every dish at Swarg Exotica and Restro is carefully prepared using fresh ingredients, traditional recipes, and a touch of creativity. From spicy North Indian curries and classic Chinese dishes to comforting tandoori platters and local favorites — we’ve got something for everyone.
+
+
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="exotica0109.jpg" alt="Exotica Cafe and Restro">
+      </div>
+
+      <div class="about-text">
+        <h2> <strong>One for all</strong></h2>
+        <p>
+         
+            Whether it’s a <strong>family dinner</strong>, a <strong>birthday party</strong>, a <strong>casual outing with friends</strong>, or a <strong>corporate meal</strong> — Swarg Exotica and Restro is the place where food and memories come together.
+
+            Because good food brings people closer — and that’s what we’re here for.
+            
+            Dine. Celebrate. Repeat. – Only at Swarg Exotica.
+            
+            
+            ---
+            
+            
+
+        </p>
+      </div>
+    
+    </div>
+  </section>
+
+
+  <style>
+    /* Background Image with Dark Overlay */
+    .background {
+      background-image: url("Backgroud for pc.jpg");
+      background-size: cover;
+      background-position: center;
+      filter: blur(10px);
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      z-index: -2;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.65); /* dark overlay */
+      z-index: -1;
+    }
+   
+    a{
+      text-decoration: none;
+    }
+    .Jump-btn:hover {
+      background: linear-gradient(#2b6b73, #2b6b73);
+      color: white;
+      box-shadow: 0 0 20px #fff, 0 0 40px #fff;
+    }
+    h3{
+      text-align: center;
+      color: #e74c3c;
+    }
+
+    /* General styles */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+    }
+
+    h2.about-heading {
+      font-size: 2.8rem;
+      color: #e74c3c;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    h2.about-heading span {
+      color: #08aad2;
+    }
+    h2{
+      text-align: center;
+      color: #bee2f4;
+
+    }
+
+    /* About Us Section */
+    .about-us-section {
+      padding: 60px 0;
+      animation: fadeInSection 1.2s ease forwards;
+      opacity: 0;
+    }
+
+    .about-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 0 30px;
+      align-items: center;
+      justify-content: space-between;
+
+
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+      animation: slideFromLeft 1s ease forwards;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 15px;
+      color: #8e8e8a;
+    }
+
+    .about-image {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+      animation: slideFromRight 1s ease forwards;
+    }
+
+    .about-image img {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Animations */
+    @keyframes fadeInSection {
+      0% { opacity: 0; transform: translateY(50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideFromLeft {
+      0% { opacity: 0; transform: translateX(-80px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideFromRight {
+      0% { opacity: 0; transform: translateX(80px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-text, .about-image {
+        animation: fadeInSection 1.2s ease forwards;
+      }
+    }
+   
+  
+    
+    
+    .sidebar {
+      width: 80px;
+      min-height: 100vh;
+      background: #00000056;
+      transition: width 0.3s;
+      overflow: hidden;
+      position: fixed;
+      top: 0px;
+      z-index: 999;
+    }
+
+    .sidebar.expanded {
+      width: 260px;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 29px;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .logo {
+      text-align: center;
+      font-size: 26px;
+      padding: 30px 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 20px;
+    }
+
+    .sidebar ul li {
+      display: flex;
+      align-items: center;
+      padding: 14px 20px;
+      cursor: pointer;
+      position: relative;
+      transition: background 0.3s;
+    }
+
+    .sidebar ul li i {
+      font-size: 22px;
+      margin-right: 20px;
+      min-width: 24px;
+      text-align: center;
+    }
+
+    .sidebar ul li span {
+      transition: opacity 0.3s;
+      white-space: nowrap;
+    }
+
+    .sidebar ul li:hover {
+      background: #2c2c3e;
+      background: #ff6b81;
+      border-radius: 0 25px 25px 0;
+    }
+
+  
+
+    .active i, .active span {
+      color: #fff;
+    }
+
+    .sidebar:not(.expanded) ul li span {
+      display: none;
+    }
+
+    .sidebar ul li::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #2c2c3e;
+      padding: 4px 10px;
+      border-radius: 5px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      margin-left: 10px;
+      font-size: 14px;
+    }
+
+    .sidebar:not(.expanded) ul li:hover::after {
+      opacity: 1;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 40px;
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+  </style>
+<script>
+  function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("expanded");
+  }
+</script>
+
+</body>
+</html>
